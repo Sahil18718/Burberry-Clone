@@ -37,7 +37,7 @@ body {
     background-color: red;
 }
 
-.navcontent{
+.navcontent, .cart{
     display: none;
     position: absolute;
     left: 0;
@@ -60,6 +60,19 @@ body {
 .navcontent a:hover {
     background-color: #eee;
     color: black;
+}
+.right{
+    display: flex;
+    margin: auto;
+    width: 300px;
+    margin-top: 30px;
+    margin-right: 0px;
+}
+.right img{
+    width:100%;
+   
+    
+    
 }
 .jacket{
     display: grid;
