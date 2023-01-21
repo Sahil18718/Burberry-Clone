@@ -34,8 +34,8 @@ body {
     background-color: inherit;
     
 }
-.navbar a:hover, .subnav:hover ,.subnavbtn {
-    text-decoration: underline;
+.navbar a:hover, .subnav:hover ,.subnavbtn:hover {
+   text-decoration: underline;
     
 }
 .top h1:hover{
@@ -66,6 +66,19 @@ body {
     background-color: #eee;
     color: black;
 }
+.right{
+    display: flex;
+    margin: auto;
+    width: 300px;
+    margin-top: 30px;
+    margin-right: 0px;
+}
+.right img{
+    width:100%;
+   
+    
+    
+}
 .pic{
     width: 100%;
     position: relative;
@@ -90,7 +103,7 @@ body {
 }
 .in{
     width: 75%;
-    border: 2px solid red;
+    
     margin-left: 150px;
     margin-top: 20px;
     background-color: rgb(253, 239, 241);
@@ -113,25 +126,32 @@ body {
     margin-top: 20px;
     height: 30px;
     width: 30%;
-    margin-left: 15px;
+    font-size: 20px;
+    margin-left: 350px;
     margin-bottom: 20px;
     color:white;
     background-color: black;
+    text-align: center;
 }
 .up{
     width: 75%;
-    border: 2px solid red;
-    margin-left: 40px; 
+   
     margin-top: 20px;
     background-color: rgb(253, 239, 241);
     
 }
 .upsmall{
-    border: 2px solid black;
+    
     width: 80%;
     margin-top: 40px;
     margin-left: 55px;
     background-color: rgb(220, 216, 216);
+}
+.upsmall p{
+    margin-left:10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
 }
 #Signin{
     margin-top: 20px;
@@ -142,6 +162,7 @@ body {
     color:white;
     background-color: black;
     font-size: 20px;
+    text-align: center;
     
 }
 .cont{
