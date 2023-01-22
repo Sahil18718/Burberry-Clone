@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+           
+            grid-template-columns: repeat(2,1fr);
+            margin-top: 50px;
+            width: 850px;
+            margin: auto;
+           
+        }
+        .left{
+           
+            
+        }
+        .left img{
+            width:100%;
+            height: 100%;
+        }
+        .right{
+            width: 400px;
+            
+        }
+        #req{
+            margin-left: 200px;
+        }
+        .right h5 {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .right form{
+            margin-left: 30px;
+            margin-right: 30px;
+            
+        }
+        .right h6{
+            margin-left: 30px;
+            margin-right: 30px;
+            color: gray;
+        }
+        .name{
+           width: 85%;
+           height: 30px;
+          
+           border:none;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="https://assets.burberry.com/is/image/Burberryltd/21F59E5E-ED30-4A76-AE0E-98E7921E2AAE?wid=1920" alt="">
+        </div>
+        <div class="right">
+            <h5> <b> EMAIL SIGN-UP </b></h5>
+            <h5>Sign up below for personalised email updates about the world of Burberry, including exclusive events, early access to limited-edition products and collaborations, the latest campaign and collection launches and a host of expert services available to you.</h5>
+            <h5 id="req">*Required field</h5>
+            
+            <form action="/action_page.php">
+                <input  type="text"  class="name" placeholder="Email*">
+                <input style="margin-top:10px" type="text" class="name" placeholder="First Name*">
+                <input style="margin: top 10px" type="text" class="name" placeholder="Last Name*">
+                <div class="label" style="display: flex; margin-left: 20px;margin-top: 15px;">
+                    <input type="checkbox" id="vehicle1" >
+                    <label for="vehicle1"> Female</label><br>
+                    <input type="checkbox" id="vehicle1" >
+                    <label for="Male"> Male</label><br>
+                </div>
+                
+                <input style="width: 85%;margin-top: 20px;color: white;background-color: black; height: 30px;" type="submit" id="Submit" value="Sign Up">
+            </form>
+            <h6>Subscribe to receive email updates about Burberry products, services and events. When you subscribe, you confirm you have read Burberry's <a href="https://us.burberry.com/legal-cookies/privacy-policy/">Privacy Policy</a>. You may opt out of receiving email updates at any time using the unsubscribe link in the emails. Burberry uses your personal information to offer an enhanced customer service tailored to your preferences. You provide your personal information voluntarily. </h6>
+        </div>
+    </div>
+</body>
+</html>
