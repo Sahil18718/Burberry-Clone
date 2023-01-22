@@ -4,49 +4,57 @@ body {
     
 }
 .top{
-    border: 2px solid black;
-    height: 500px;
+    height: 80px;
+    margin-top: -60px;
+}
+.top:hover{
+    background-color: white;
     
+}
+.tp{
+    background-color: black;
+    color:white;
+    text-align: center;
+    height: 30px;
+    margin-top: -15px;
+
 }
 
 .top h1{
     float: left;
     text-align: center;
-    padding: 14px 16px;
-    border: 2px solid black;
+    padding: 0px 16px;
+    
 }
 .subnav{
     float: left;
     overflow: hidden;
-    padding: 35px 5px;
+    padding: 25px 5px;
+    border: none;
 }
 .subnav .subnavbtn {
     
     font-size: 16px;  
-    border: 2px solid red;
+    border:none;
     outline: none;
     padding: 10px 10px;
     background-color: inherit;
     
 }
-.navbar a:hover, .subnav:hover ,.subnavbtn {
-    background-color: red;
+.navbar a:hover, .subnav:hover ,.subnavbtn:hover{
     text-decoration: underline;
 }
-.top h1:hover{
-    background-color: red;
-}
 
-.navcontent, .cart{
+
+.navcontent {
     display: none;
     position: absolute;
     left: 0;
-    background-color: red;
+    background-color: white;
     z-index: 1;
     width: 100%;
 }
 .navcontent ul li {
-    text-decoration: none;
     margin-left: 20px;
 }
 .subnav:hover .navcontent {
@@ -54,7 +62,7 @@ body {
 }
 .navcontent a {
     float: left;
-    color: white;
+    color:black;
     text-decoration: none;
 }
 .navcontent a:hover {
@@ -65,24 +73,29 @@ body {
     display: flex;
     margin: auto;
     width: 300px;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-right: 0px;
-}
-.right img{
-    width:100%;
-   
     
+}
+
+
+video {
+    object-fit: fill;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    top: 3px;
     
 }
 .jacket{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    border: 2px solid red;
-    
+    margin-top: 600px;
 }
 .jacket > div{
     width:100%;
-    border: 2px solid blue;
     position: relative;
 }
 .jacket img{
@@ -94,15 +107,24 @@ body {
     margin-left: 25px;
     font-size: 20px;
 } 
+.whitetext{
+    position: absolute;
+    top: 50px;
+    margin-left: 25px;
+    font-size: 20px;
+    color: white;
+}
 .product{
-    border: 2px solid black;
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 145px;
+    margin-bottom: 120px;
+}
+.product a{
+    color: black;
+    text-decoration: none;
 }
 .pic{
     width: 100%;
-    border: 2px solid red;
     position: relative;
 }
 .pic img{
@@ -136,11 +158,4 @@ body {
     border-left: none;
     border-right: none;
     
-}
-.back-video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    width: 100%;
 }
