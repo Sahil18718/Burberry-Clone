@@ -38,6 +38,14 @@ body {
    text-decoration: underline;
     
 }
+.tp{
+    background-color: black;
+    color:white;
+    text-align: center;
+    height: 30px;
+    margin-top: -15px;
+
+}
 .top h1:hover{
     
 }
@@ -70,13 +78,13 @@ body {
     display: flex;
     margin: auto;
     width: 300px;
-    margin-top: 30px;
+    margin-top: 0px;
     margin-right: 0px;
 }
 .right img{
     width:100%;
    
-    
+    margin-top: 30px;    
     
 }
 .pic{
