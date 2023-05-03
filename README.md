@@ -12,4 +12,4 @@ features Working
 
 
 <h3>Landing Page</h3>
-![main page](https://user-images.githubusercontent.com/119488054/235913984-881bc7d4-d3d2-41f6-9d06-121bdbd873bc.png)
+[main page](https://user-images.githubusercontent.com/119488054/235913984-881bc7d4-d3d2-41f6-9d06-121bdbd873bc.png)
