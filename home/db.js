@@ -215,13 +215,7 @@ class Product {
   const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
   console.log("Is 2023 a leap year?", isLeapYear(2023));
   
-  const fibonacci = (n) => {
-    const sequence = [0, 1];
-    for (let i = 2; i <= n; i++) {
-      sequence.push(sequence[i - 1] + sequence[i - 2]);
-    }
-    return sequence;
-  };
+  
   
   const fibonacciSequence = fibonacci(10);
   console.log("Fibonacci sequence:", fibonacciSequence);
@@ -399,4 +393,206 @@ class Product {
     return merge(mergeSort(left), mergeSort(right));
   };
   
- 
+
+console.log("Unsorted array:", unsortedArray);
+console.log("Sorted array (merge sort):", mergeSort(unsortedArray.slice()));
+
+const quickSort = (arr) => {
+if (arr.length <= 1) return arr;
+const pivot = arr[arr.length - 1];
+const left = [];
+const right = [];
+for (let i = 0; i < arr.length - 1; i++) {
+if (arr[i] < pivot) {
+  left.push(arr[i]);
+} else {
+  right.push(arr[i]);
+}
+}
+return [...quickSort(left), pivot, ...quickSort(right)];
+};
+
+console.log("Unsorted array:", unsortedArray);
+console.log("Sorted array (quick sort):", quickSort(unsortedArray.slice()));
+
+class Student {
+constructor(name, age, grade) {
+this.name = name;
+this.age = age;
+this.grade = grade;
+}
+
+displayInfo() {
+console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+}
+}
+
+const student1 = new Student("Alice", 16, "A");
+const student2 = new Student("Bob", 17, "B");
+const student3 = new Student("Eve", 18, "A");
+
+const studentList = [student1, student2, student3];
+
+console.log("Student List:");
+for (const student of studentList) {
+student.displayInfo();
+}
+
+const isAdult = (student) => student.age >= 18;
+
+console.log("Are all students adults?", studentList.every(isAdult));
+console.log("Is at least one student an adult?", studentList.some(isAdult));
+
+const adultStudents = studentList.filter(isAdult);
+console.log("Adult Students:");
+for (const student of adultStudents) {
+student.displayInfo();
+}
+
+const totalStudentAge = studentList.reduce((total, student) => total + student.age, 0);
+console.log("Total age of all students:", totalStudentAge);
+
+const averageStudentAge = totalStudentAge / studentList.length;
+console.log("Average age of students:", averageStudentAge);
+
+const studentNames = studentList.map(student => student.name);
+console.log("Names of students:", studentNames);
+
+const studentAges = studentList.map(student => student.age);
+console.log("Ages of students:", studentAges);
+
+const studentGrades = studentList.map(student => student.grade);
+console.log("Grades of students:", studentGrades);
+
+class Shape {
+constructor(type) {
+this.type = type;
+}
+
+describe() {
+console.log(`This is a ${this.type}.`);
+}
+}
+
+class Circle extends Shape {
+constructor(radius) {
+super("Circle");
+this.radius = radius;
+}
+
+area() {
+return Math.PI * this.radius ** 2;
+}
+
+circumference() {
+return 2 * Math.PI * this.radius;
+}
+}
+
+class Rectangle extends Shape {
+constructor(width, height) {
+super("Rectangle");
+this.width = width;
+this.height = height;
+}
+
+area() {
+return this.width * this.height;
+}
+
+perimeter() {
+return 2 * (this.width + this.height);
+}
+}
+
+const circle = new Circle(5);
+console.log("Circle:");
+circle.describe();
+console.log("Area:", circle.area());
+console.log("Circumference:", circle.circumference());
+
+const rectangle = new Rectangle(4, 6);
+console.log("Rectangle:");
+rectangle.describe();
+console.log("Area:", rectangle.area());
+console.log("Perimeter:", rectangle.perimeter());
+
+const power = (base, exponent) => base ** exponent;
+console.log("2^5 =", power(2, 5));
+
+const factorial = (n) => {
+if (n <= 1) return 1;
+return n * factorial(n - 1);
+};
+
+console.log("Factorial of 5:", factorial(5));
+
+const fibonacci = (n) => {
+if (n <= 0) return [];
+if (n === 1) return [0];
+if (n === 2) return [0, 1];
+const sequence = [0, 1];
+for (let i = 2; i < n; i++) {
+sequence.push(sequence[i - 1] + sequence[i - 2]);
+}
+return sequence;
+};
+
+console.log("Fibonacci sequence of length 10:", fibonacci(10));
+
+const flattenDeep = (arr) => arr.reduce((flat, next) => flat.concat(Array.isArray(next) ? flattenDeep(next) : next), []);
+const deepArray = [1, [2, [3, [4, 5]]], 6, [7, 8]];
+console.log("Deep array:", deepArray);
+console.log("Flattened deep array:", flattenDeep(deepArray));
+
+class Timer {
+constructor() {
+this.startTime = new Date();
+}
+
+getElapsedTime() {
+const currentTime = new Date();
+return currentTime - this.startTime;
+}
+}
+
+const timer = new Timer();
+
+setTimeout(() => {
+console.log("Time elapsed:", timer.getElapsedTime(), "ms");
+}, 2000);
+
+const promisify = (func) => {
+return (...args) => {
+return new Promise((resolve, reject) => {
+  func(...args, (err, result) => {
+    if (err) {
+      reject(err);
+    } else {
+      resolve(result);
+    }
+  });
+});
+};
+};
+
+const readFile = promisify(fs.readFile);
+
+readFile("example.txt", "utf8")
+.then((data) => {
+console.log("File content:", data);
+})
+.catch((err) => {
+console.error("Error reading file:", err);
+});
+
+const wait = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+(async () => {
+console.log("Start");
+await wait(2000);
+console.log("After 2 seconds");
+await wait(1000);
+console.log("After another 1 second");
+})();
+
+console.log("End");
