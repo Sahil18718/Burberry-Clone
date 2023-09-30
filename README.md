@@ -1,4 +1,4 @@
-An E- Commerce Website For Shopping
+The Burberry website is the online hub for the luxury fashion brand Burberry, offering a range of high-end clothing, accessories, and fragrances. It provides a glimpse into the brand's heritage, latest collections, store locations, and customer support.
 
 Deployed link:  https://cosmic-meringue-964590.netlify.app/
 
